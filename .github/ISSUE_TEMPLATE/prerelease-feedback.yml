@@ -1,0 +1,76 @@
+name: "Pre-release feedback / feedback voor pre-release"
+description: "Report a bug, DAW compatibility issue, idea, or short review."
+title: "[Pre-release] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for trying YURI SYNTH BOX. Issues are public when this repository becomes public. Do not include private projects, personal data, passwords, or sensitive logs. For private reports, email info@yurienterprise.com.
+  - type: dropdown
+    id: report_kind
+    attributes:
+      label: "What kind of feedback? / Soort feedback"
+      options:
+        - Bug or crash
+        - DAW compatibility
+        - Sound or performance
+        - Idea or improvement
+        - Short review
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: "YURI SYNTH BOX version"
+      placeholder: "e.g. 0.7.2 pre-release"
+    validations:
+      required: true
+  - type: dropdown
+    id: format
+    attributes:
+      label: "Format / formaat"
+      options:
+        - VST3
+        - Standalone
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: host
+    attributes:
+      label: "DAW and version / DAW en versie"
+      description: "Write Standalone if you are not using a DAW."
+      placeholder: "e.g. FL Studio, MAGDA, or Standalone"
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: "Windows version / Windows-versie"
+      placeholder: "e.g. Windows 11 24H2"
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: "What happened or what do you think? / Wat gebeurde er?"
+      description: "For a bug, include expected and actual behavior. For a review, say what works well and what should improve."
+      placeholder: "A short, concrete description helps us act on your feedback."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: "Steps to reproduce / Stappen om te herhalen"
+      description: "Optional for reviews and ideas."
+  - type: dropdown
+    id: rating
+    attributes:
+      label: "Optional rating / optionele beoordeling"
+      options:
+        - Not a review
+        - "1 / 5"
+        - "2 / 5"
+        - "3 / 5"
+        - "4 / 5"
+        - "5 / 5"
